@@ -1,0 +1,363 @@
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; /* Mover desde .heroContent */
+    background-color: var(--color-primary);
+    position: relative;
+}
+
+.leftContent {
+    width: 40%;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.leftContent h1 {
+    color: var(--color-secondary);
+    font-family: var(--font-secondary);
+    font-weight: 300;
+    font-size: 2.6rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+.leftContent h2 {
+    font-family: var(--font-secondary);
+    color: var(--color-secondary);
+    font-weight: 200;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.leftContent p {
+    font-family: var(--font-secondary);
+    color: var(--color-tertiary);
+    font-size: 1.5rem;
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+/*Estilos para Botones de Descarga*/
+
+.buttonContainer {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.downloadButton {
+    padding: 0.8rem 1rem;
+    background-color: var(--color-fifthary);
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    border-radius: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family:var(--font-primary);
+    font-size: .9rem;
+}
+
+.downloadButton:hover {
+    background-color: var(--color-quaternary);
+}
+
+/*Contenido Lado Derecho Efecto Holografico De Codigo*/
+
+.rightContent {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.imagen {
+    position: absolute;
+    top: 19%; /* Posiciona la imagen en la parte superior de la ventana */
+    left: 52%; /* Posiciona la imagen en el lado izquierdo de la ventana */
+    width: 35%;
+    filter: brightness(0.8);
+    opacity: 0.9;
+}
+
+.holographicContainer {
+    width: 38rem;
+    height: 39rem;
+    z-index: 10;
+    overflow: visible;
+}
+
+.codeFragment {
+    position: absolute;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    border: 1px solid;
+    backdrop-filter: blur(10px);
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.codeFragment:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.codeFragment.react {
+    color: #61dafb;
+    border-color: #61dafb;
+    box-shadow: 0 0 20px rgba(97, 218, 251, 0.3);
+}
+
+.codeFragment.react:hover {
+    box-shadow: 0 0 30px rgba(97, 218, 251, 0.5);
+}
+
+.codeFragment.javascript {
+    color: #f7df1e;
+    border-color: #f7df1e;
+    box-shadow: 0 0 20px rgba(247, 223, 30, 0.3);
+}
+
+.codeFragment.javascript:hover {
+    box-shadow: 0 0 30px rgba(247, 223, 30, 0.6);
+}
+
+.codeFragment.css {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+}
+
+.codeFragment.css:hover {
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.6);
+}
+
+.codeFragment.html {
+    color: #00ff88;
+    border-color: #00ff88;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.codeFragment.html:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.6);
+}
+
+.codeFragment.typescript {
+    color: #3178c6;
+    border-color: #3178c6;
+    box-shadow: 0 0 20px rgba(49, 120, 198, 0.3);
+}
+
+.codeFragment.typescript:hover {
+    box-shadow: 0 0 30px rgba(49, 120, 198, 0.6);
+}
+
+.codeFragment.node {
+    color: #68a063;
+    border-color: #68a063;
+    box-shadow: 0 0 20px rgba(104, 160, 99, 0.3);
+}
+
+.codeFragment.node:hover {
+    box-shadow: 0 0 30px rgba(104, 160, 99, 0.6);
+}
+
+.codeFragment.git {
+    color: #f05032;
+    border-color: #f05032;
+    box-shadow: 0 0 20px rgba(240, 80, 50, 0.3);
+}
+
+.codeFragment.git:hover {
+    box-shadow: 0 0 30px rgba(240, 80, 50, 0.6);
+}
+
+.codeFragment.react.fragment1 {
+    top: 5%;
+    left: 10%;
+    transform: translate(0, 0);
+    animation-delay: 0s;
+}
+
+.codeFragment.javascript.fragment2 {
+    top: 10%;
+    right: 15%;
+    transform: translate(0, 0);
+    animation-delay: 1s;
+}
+
+.codeFragment.css.fragment3 {
+    bottom: 10%;
+    left: 5%;
+    transform: translate(0, 0);
+    animation-delay: 2s;
+}
+
+.codeFragment.html.fragment4 {
+    bottom: 5%;
+    right: 10%;
+    transform: translate(0, 0);
+    animation-delay: 0.5s;
+}
+
+.codeFragment.react.fragment5 {
+    top: 15%;
+    left: 40%;
+    transform: translate(-50%, 0);
+    animation-delay: 1.5s;
+}
+
+.codeFragment.typescript.fragment6 {
+    bottom: 15%;
+    left: 35%;
+    transform: translate(-50%, 0);
+    animation-delay: 3s;
+}
+
+.codeFragment.node.fragment7 {
+    top: 40%;
+    left: 5%;
+    transform: translate(0, -50%);
+    animation-delay: 2.5s;
+}
+
+.codeFragment.git.fragment8 {
+    top: 60%;
+    right: 5%;
+    transform: translate(0, -50%);
+    animation-delay: 1.8s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/*Diseño Para Moviles*/
+
+@media (max-width: 480px) {
+    .hero {
+        flex-direction: column; /* Cambia a una disposición de columna */
+    }
+
+    .leftContent {
+        width: 100%; /* Asegúrate de que los contenedores ocupen todo el ancho disponible */
+        margin-bottom: 1rem; /* Añade margen inferior para separar los elementos */
+    }
+
+    .leftContent h1{
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .leftContent h2 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .leftContent p {
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 0px 2rem;
+    }
+
+    .buttonContainer {
+        justify-content: center; /* Centra los botones */
+        flex-direction: column; /* Apila los botones verticalmente */
+        align-items: center; /* Centra los botones horizontalmente */
+    }
+
+    .downloadButton {
+        width: 80%; /* Aumenta el ancho de los botones para facilitar el toque */
+        margin-bottom: 0.5rem; /* Añade margen inferior entre los botones */
+    }
+
+    .holographicContainer {
+        display: none; /* Oculta el contenedor holográfico en móviles */
+    }
+
+    .imagen{
+        display: none;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .hero {
+        flex-direction: column; /* Ajusta el diseño según sea necesario */
+        padding: 2rem;
+    }
+
+    .leftContent{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .rightContent{
+        position: absolute;
+    }
+
+    .buttonContainer {
+        justify-content: center;
+    }
+
+    .imagen{
+        display: none;
+    }
+
+    .rightContent{
+        width: 100%;
+        height: 30rem;
+    }
+
+    .holographicContainer{
+        height: 680px;
+        width: 100%;
+    }
+    /* Posicionamiento en zigzag en el borde superior */
+    .codeFragment.react.fragment1 {
+        top:-14%;
+        left: 4%;
+    }
+
+    .codeFragment.javascript.fragment2 {
+        top: -12%;
+        right: 34%;
+    }
+    
+
+    /* Posicionamiento en zigzag en el borde inferior */
+    .codeFragment.react.fragment5 {
+        top: -19%;
+        left: 31%;
+    }
+
+    .codeFragment.typescript.fragment6 {
+        bottom: -9%;
+        left: 53%;
+    }
+
+    .codeFragment.node.fragment7 {
+        top: 100%;
+        left:29%;
+    }
+
+    .codeFragment.git.fragment8 {
+        top: -13%;
+        right: 11%;
+    }
+}

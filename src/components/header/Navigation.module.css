@@ -1,0 +1,178 @@
+/* Base Styles */
+.nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.navList {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navLink {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-size: 1.2rem;
+    font-family: 'Bebas Neue', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Underline animation for nav links */
+.navLink::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-secondary);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.navLink:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Menu toggle button (hidden by default) */
+.menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Close button (hidden by default) */
+.closeButton {
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    color: var(--color-secondary);
+    font-size: 2rem; 
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Social media container (hidden by default) */
+.socialContainer {
+    display: none;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.socialIcon {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    transition: transform 0.3s ease-in-out, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+}
+
+.socialIcon:hover {
+    transform: translateY(-3px);
+    color: var(--color-primary);
+    opacity: 0.8;
+}
+
+/* Animation for menu opening */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 781px) {
+    /* Show menu toggle button */
+    .menuToggle {
+        display: block;
+    }
+
+    /* Navigation list styling for tablet */
+    .navList {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: .5rem;
+        left: 0;
+        right: 0;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 80vh;
+        flex-direction: column;
+        padding: 4rem 1rem 2rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+        gap: 1rem;
+        align-items: center;
+        justify-content: flex-start;
+        overflow-y: auto;
+        background-color: var(--color-secondary);
+    }
+
+    /* When menu is open */
+    .menuOpen {
+        display: flex; 
+        animation: slideDown 0.3s ease-in-out;
+    }
+
+    /* Navigation link styling for tablet */
+    .navLink {
+        font-size: 1.5rem;
+        color: var(--color-primary);
+    }
+    
+    /* Show close button */
+    .closeButton {
+        display: block;
+        color: var(--color-primary);
+    }
+
+    /* Show social icons container */
+    .socialContainer {
+        display: flex;
+        margin-top: 1.5rem;
+    }
+
+    /* Social icon styling for tablet */
+    .socialIcon {
+        font-size: 1.5rem;
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 480px) {
+    /* Mobile-specific adjustments if needed */
+    /* Most styles are inherited from tablet view */
+}
