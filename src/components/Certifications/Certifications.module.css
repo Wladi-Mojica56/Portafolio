@@ -1,102 +1,223 @@
+/*=====================
+Main Certifications Section
+=======================*/
 .certificationsSection {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+    padding: 0.75rem 2rem;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: var(--color-primary);
 }
 
+/* Section Title */
 .certificationsSection h2 {
-  text-align: center;
-  margin-bottom: 2.5rem;
-  font-size: 2.5rem;
-  color: var(--color-secondary);
+    text-align: center;
+    font-family: var(--font-secondary);
+    margin: 0;
+    padding: 2.5rem 0;
+    font-size: 2.5rem;
+    color: var(--color-secondary);
 }
 
+/*=====================
+Swiper Carousel Configuration
+=======================*/
 .certificationsSwiper {
-  padding-bottom: 3rem; /* Espacio para la paginación */
-  padding-top: 3rem;
-  margin: 0 -1rem;
+    padding: 3rem 0; /* Space for pagination */
+    margin: 0 -1rem;
+    overflow: visible;
 }
 
+/* Slide Container */
 .certSlide {
-  height: 100%;
-  display: flex;
-  justify-content: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
+/*=====================
+Certification Card
+=======================*/
 .certCard {
-  width: 100%;
-  max-width: 350px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: var(--color-quaternary);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+    background-color: var(--color-quaternary);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Hover Effect for Cards */
 .certCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Certificate Image */
 .certCard img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-bottom: 1px solid var(--color-fifthary);
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--color-fifthary);
 }
 
+/*=====================
+Certificate Information
+=======================*/
 .certInfo {
-  padding: 1.5rem;
+    padding: 1.5rem;
 }
 
+/* Certificate Title */
 .certInfo h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.2rem;
-  color: var(--color-secondary);
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
 }
 
+/* Issuing Entity */
 .issuer {
-  color: var(--color-tertiary);
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+    color: var(--color-tertiary);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
 }
 
+/* Course Duration */
 .hours {
-  color: var(--color-tertiary);
-  font-size: 0.8rem;
-  font-style: italic;
+    color: var(--color-tertiary);
+    font-size: 0.8rem;
+    font-style: italic;
 }
 
-/* Personalización de los controles de Swiper */
+/*=====================
+Swiper Controls Customization
+=======================*/
+/* Pagination Bullets */
 :global(.swiper-pagination-bullet) {
-  background-color: var(--color-tertiary);
-  opacity: 0.5;
+    background-color: var(--color-tertiary);
+    opacity: 0.5;
 }
 
+/* Active Bullet */
 :global(.swiper-pagination-bullet-active) {
-  background-color: var(--color-secondary);
-  opacity: 1;
+    background-color: var(--color-secondary);
+    opacity: 1;
 }
 
-/* Estilo para el slide activo/central */
+/* Style for All Slides - Add Opacity Transition */
+:global(.swiper-slide) {
+    opacity: 0.6; /* Non-active slides slightly transparent */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transformation */
+}
+
+/* Style for Active/Central Slide */
+:global(.swiper-slide-active) {
+    opacity: 1; /* Active slide fully visible */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
 :global(.swiper-slide-active) .certCard {
-  transform: scale(1.15);
-  z-index: 2;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+    transform: scale(1);
+    z-index: 2;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease; /* Make the transition slower */
 }
 
-/* Responsive */
+/* Style for Adjacent Slides to the Active One */
+:global(.swiper-slide-prev),
+:global(.swiper-slide-next) {
+    opacity: 0.8; /* Adjacent slides more visible than others */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/*=====================
+Responsive Design
+=======================*/
+
+/* Tablets (medium screens) */
 @media (max-width: 768px) {
-  .certificationsSection {
-    padding: 3rem 1rem;
-  }
-  
-  .certificationsSection h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
+    /* Spacing adjustments for tablets */
+    
+    /* Reduce title size */
+    .certificationsSection h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Adjustments for active slide on tablets */
+    :global(.swiper-slide-active) .certCard {
+        transform: scale(1.1);
+    }
+}
+
+/* Mobile (small screens) */
+@media (max-width: 480px) {
+    /* Further reduction of title size */
+    .certificationsSection h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Adjustments for main container on mobile */
+    .certificationsSection {
+        overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+    
+    /* Adjustments for Swiper on mobile */
+    .certificationsSwiper {
+        padding: 2rem 0;
+        margin: 0 auto; /* Center the swiper */
+        max-width: 100%; /* Limit maximum width */
+        overflow: hidden; /* Control overflow */
+    }
+    
+    /* Slide Container */
+    .certSlide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Card size adjustment */
+    .certCard {
+        width: 90%; /* Reduce width for better fit */
+        margin: 0 auto; /* Center the card */
+        max-width: 280px; /* Set a maximum width */
+    }
+    
+    /* Reduce image height */
+    .certCard img {
+        height: 180px;
+    }
+    
+    /* Restore internal padding */
+    .certInfo {
+        padding: 1rem; /* Restore some padding for better readability */
+    }
+    
+    /* Certificate title size adjustment */
+    .certInfo h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* Remove scale on mobile to prevent overflow */
+    :global(.swiper-slide-active) .certCard {
+        transform: scale(1);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        transition: all 0.5s ease;
+    }
+    
+    /* Ensure non-active slides are correctly positioned with smooth transition */
+    :global(.swiper-slide) {
+        display: flex;
+        justify-content: center;
+        opacity: 0.7;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    
+    :global(.swiper-slide-active) {
+        opacity: 1;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
 }
