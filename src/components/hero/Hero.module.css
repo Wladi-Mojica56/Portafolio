@@ -1,5 +1,5 @@
 .hero {
-    min-height: 680px;
+    min-height: 520px;
     display: flex;
     align-items: center;
     justify-content: space-evenly; /* Mover desde .heroContent */
@@ -252,6 +252,7 @@
 @media (max-width: 480px) {
     .hero {
         flex-direction: column; /* Cambia a una disposición de columna */
+
     }
 
     .leftContent {
@@ -298,7 +299,7 @@
 
 @media (min-width: 481px) and (max-width: 1024px) {
     .hero {
-        flex-direction: column; /* Ajusta el diseño según sea necesario */
+        flex-direction: column; 
         padding: 2rem;
     }
 

@@ -1,14 +1,20 @@
+import React from 'react';
 import Header from './components/header/Header';
 import Hero from './components/hero/hero';
-import './App.css';
-function App() {
+import Certifications from './components/Certifications/certifications';
 
+
+import './App.css';
+
+function App() {
   return (
-    <>
-      <Header />  
+    <div>
+      <Header />
       <Hero />
-    </>
-  )
+      <Certifications />
+    </div>
+    
+  );
 }
 
-export default App
+export default App;
