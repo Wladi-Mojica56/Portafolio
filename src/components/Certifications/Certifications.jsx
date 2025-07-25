@@ -1,7 +1,9 @@
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectCoverflow } from 'swiper/modules';
 import { certificationsData } from './certificationsData';
 import styles from './Certifications.module.css';
+import CertificationModal from './CertificationModal';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -10,9 +12,19 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-coverflow';
 
 function Certifications() {
+    const [selectedCertification, setSelectedCertification] = useState(null);
+
+    const handleViewMore = (certification) => {
+        setSelectedCertification(certification);
+    };
+
+    const closeModal = () => {
+        setSelectedCertification(null);
+    };
+
     return (
         <section className={styles.certificationsSection} id="certifications">
-            <h2>Featured Certifications</h2>
+            <h2>Certificaciones Destacadas</h2>
             
             <Swiper
                 modules={[Autoplay, Pagination, EffectCoverflow]}
@@ -48,11 +60,16 @@ function Certifications() {
                                 <h3>{certification.title}</h3>
                                 <p className={styles.issuer}>{certification.issuer}</p>
                                 {certification.hours && <p className={styles.hours}>{certification.hours}</p>}
+                                <button className={styles.viewMoreButton} onClick={() => handleViewMore(certification)}>Ver Detalles</button>
                             </div>
                         </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
+
+            {selectedCertification && (
+                <CertificationModal certification={selectedCertification} onClose={closeModal} />
+            )}
         </section>
     );
 }
