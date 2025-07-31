@@ -10,6 +10,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-coverflow';
+import { motion } from 'framer-motion';
 
 function Certifications() {
     const [selectedCertification, setSelectedCertification] = useState(null);
@@ -57,10 +58,19 @@ function Certifications() {
                         <div className={styles.certCard}>
                             <img src={certification.image} alt={certification.title} />
                             <div className={styles.certInfo}>
-                                <h3>{certification.title}</h3>
+                                <h3 className={styles.cardtitle}>{certification.title}</h3>
                                 <p className={styles.issuer}>{certification.issuer}</p>
                                 {certification.hours && <p className={styles.hours}>{certification.hours}</p>}
-                                <button className={styles.viewMoreButton} onClick={() => handleViewMore(certification)}>Ver Detalles</button>
+                                
+                                <motion.button
+                                    className={styles.viewMoreButton}
+                                    onClick={() => handleViewMore(certification)}
+                                    whileHover={{ scale: 1.1}}
+                                    whileTap={{ scale: 0.8 }}
+                                    >
+                                    Ver Detalles
+                                </motion.button>
+
                             </div>
                         </div>
                     </SwiperSlide>

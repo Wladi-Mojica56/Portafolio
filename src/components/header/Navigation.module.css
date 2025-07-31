@@ -16,8 +16,8 @@
 
 .navLink {
     text-decoration: none;
-    color: var(--color-secondary);
-    font-size: 1.2rem;
+    color: var(--color-tertiary);
+    font-size: 1.5rem;
     font-family: 'Bebas Neue', sans-serif;
     position: relative;
     overflow: hidden;
@@ -32,7 +32,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--color-secondary);
+    background-color: var(--color-quaternary);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -47,7 +47,7 @@
     display: none;
     background: none;
     border: none;
-    color: var(--color-secondary);
+    color: var(--color-tertiary);
     font-size: 1.5rem;
     cursor: pointer;
     padding: 0.5rem;
@@ -61,7 +61,7 @@
     right: 0.75rem;
     background: none;
     border: none;
-    color: var(--color-secondary);
+    color: var(--color-tertiary); /*NO cambia*/
     font-size: 2rem; 
     cursor: pointer;
     padding: 0.5rem;
@@ -136,7 +136,7 @@
         align-items: center;
         justify-content: flex-start;
         overflow-y: auto;
-        background-color: var(--color-secondary);
+        background-color: var(--color-tertiary);
     }
 
     /* When menu is open */
@@ -158,21 +158,16 @@
     }
 
     /* Show social icons container */
-    .socialContainer {
+    .socialContainer {  
         display: flex;
         margin-top: 1.5rem;
     }
 
     /* Social icon styling for tablet */
     .socialIcon {
+        background-color:transparent;
         font-size: 1.5rem;
         width: 2rem;
         height: 2rem;
     }
-}
-
-/* Responsive Design - Mobile */
-@media (max-width: 480px) {
-    /* Mobile-specific adjustments if needed */
-    /* Most styles are inherited from tablet view */
 }
