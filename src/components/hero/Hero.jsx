@@ -1,68 +1,80 @@
 import styles from './hero.module.css';
-import imagen from '../../Imgs/arco-fondo-amarillo.jpg';
+import { motion } from 'framer-motion';
+import {useState, useEffect} from 'react';
+import {phrases} from './phrases';
+import Typewriter from './typewriter';
 
 function Hero() {
     const name = "Wladimyr Mojica";
     const role = "Desarollador Frontend";
-    const description = "No solo escribo código,\norquesto experiencias digitales\nque hacen que los usuarios no quieran cerrar la pestaña";
+    const [currentPhrase, setCurrentPhrase] = useState('');
+    const [index, setIndex] = useState(0);
+    const [charIndex, setCharIndex] = useState(0);
 
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setCurrentPhrase((prev) => prev + phrases[index][charIndex]);
+            setCharIndex((prev) => prev + 1);
+        },100);
+
+
+        if(charIndex === phrases[index].length){
+            clearTimeout(timeout);
+            setTimeout(() => {
+                setCharIndex(0);
+                setIndex((prev) => (prev + 1) % phrases.length);
+                setCurrentPhrase('');
+            },2000)
+        }
+        return () => clearTimeout(timeout);
+    },[charIndex, index]);
+
+
+
+    
     return (
         <section className={styles.hero}>
-            <div className={styles.leftContent}>
-                <h1>{name}</h1>
-                <h2>{role}</h2>
-                <p>{description}</p>
+            <div className={styles.heroContent}>
+                <motion.h1
+                    initial={{opacity:0, x: -50}}
+                    animate={{opacity:1, x: 0}}
+                    transition={{duration: 3}}
+                >
+                    Hola! <br/> Soy <span className={styles.name}>{name}</span>
+                </motion.h1>
+
+                <motion.h2
+                    className={styles.role}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.5, delay: 0.5 }}
+                >
+                    {role}
+                </motion.h2>
+
+                
+
+                <Typewriter texts={phrases}/>
+
+
+
 
                 <div className={styles.buttonContainer}>
-                    <button className={styles.downloadButton} onClick={() => window.open('/files/Boulevard-Despues-de-el.pdf', '_blank')}>
-                        Descargar CV
-                    </button>
-                    <button className={styles.downloadButton} onClick={() => window.open('/path/to/cv-ats.pdf', '_blank')}>
-                        Descargar CV ATS
-                    </button>
+                    <motion.button 
+                        className={styles.downloadButton} 
+                        aria-label="Download CV"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5}}
+                        whileTap={{ scale: 0.9 }}
+                    >
+                        <i className="bi bi-download"></i> Descargar CV
+                    </motion.button>
+                    
                 </div>
             </div>
 
-            <div className={styles.rightContent}>
-                <div className={styles.holographicContainer}>
-                    {/*Fragmentos de Codigo */}
-                    <div className={`${styles.codeFragment} ${styles.react} ${styles.fragment1}`}>
-                        {"useState()"}
-                    </div>
-
-                    <div className={`${styles.codeFragment} ${styles.javascript} ${styles.fragment2}`}>
-                        {"handleClick()"}
-                    </div>
-
-                    <div className={`${styles.codeFragment} ${styles.css} ${styles.fragment3}`}>
-                        {"display: flex;"}
-                    </div>
-
-                    <div className={`${styles.codeFragment} ${styles.html} ${styles.fragment4}`}>
-                        {"<div className>"}
-                    </div>
-
-                    <div className={`${styles.codeFragment} ${styles.react} ${styles.fragment5}`}>
-                        {"fetchData()"}
-                    </div>
-
-                    <div className={`${styles.codeFragment} ${styles.typescript} ${styles.fragment6}`}>
-                        {"interface Props"}
-                    </div>
-
-                    <div className={`${styles.codeFragment} ${styles.node} ${styles.fragment7}`}>
-                        {"app.get('/api')"}
-                    </div>
-
-                    <div className={`${styles.codeFragment} ${styles.git} ${styles.fragment8}`}>
-                        {"git commit"}
-                    </div>
-                </div>
-            </div>
-
-            <div className={styles.imageContainer}>
-                <img src={imagen} alt="imagen de prueba" className={styles.imagen} />
-            </div>
+            
         </section>
     );
 }

@@ -1,0 +1,396 @@
+colores:
+
+    --color-primary: #121212;
+    --color-secondary: #E0E0E0;
+    --color-tertiary: #82B1FF; /* Azul material */
+    --color-quaternary: #1E1E1E;
+    --color-fifthary: #00ACC1; /* Cian material */
+
+
+Fuentes:
+
+    --font-primary: 'Geist Mono', monospace;
+    --font-secondary: 'Bebas Neue', sans-serif;
+    --font-tertiary: 'Chiron Sung HK', sans-serif;
+
+
+
+🎨 Sistema de Diseño - Dark Minimalist
+🚀 Principios de Diseño
+Filosofía Core
+
+Minimalismo Funcional: Cada elemento debe tener un propósito claro
+Contraste Máximo: Usar el contraste para jerarquía visual
+Espaciado Generoso: El espacio en blanco es tan importante como el contenido
+Interacciones Intuitivas: Feedback visual inmediato en todas las interacciones
+Consistencia Absoluta: Patrones repetibles en toda la experiencia
+
+
+📝 Tipografía
+Fuente del Sistema
+cssfont-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+Escala Tipográfica
+TokenTamañoPesoLine HeightLetter SpacingUsodisplay-xlclamp(4rem, 10vw, 10rem)9000.9-3pxHero titles, landing headersdisplay-lgclamp(3rem, 8vw, 8rem)9000.9-2pxSection heroesdisplay-md3rem (48px)9001.1-1pxPage titlesheading-xl2.5rem (40px)8001.2-0.5pxMain headingsheading-lg2rem (32px)7001.30Sub headingsheading-md1.5rem (24px)6001.40Card titlesheading-sm1.25rem (20px)6001.40.5pxSmall headingsbody-lg1.125rem (18px)4001.60Large body textbody-md1rem (16px)4001.60Default body textbody-sm0.875rem (14px)4001.50.25pxSmall body textcaption-lg0.75rem (12px)5001.40.5pxLabels, captionscaption-sm0.625rem (10px)5001.31pxMicro text
+Pesos de Fuente
+
+Ultra Bold: 900 - Display texts, heroes
+Extra Bold: 800 - Main titles
+Bold: 700 - Headings, emphasis
+Semi Bold: 600 - Sub headings
+Medium: 500 - Labels, captions
+Regular: 400 - Body text
+Light: 300 - Subtle text (usar con precaución)
+
+
+🎨 Paleta de Colores
+Neutros (Base del Sistema)
+css/* Grises Principales */
+--color-gray-900: #0a0a0a;    /* Fondo principal */
+--color-gray-850: #111111;    /* Contenedores oscuros */
+--color-gray-800: #1a1a1a;    /* Cards, modales */
+--color-gray-700: #2a2a2a;    /* Elementos elevados */
+--color-gray-600: #333333;    /* Bordes, separadores */
+--color-gray-500: #555555;    /* Estados hover */
+--color-gray-400: #888888;    /* Texto secundario */
+--color-gray-300: #aaaaaa;    /* Texto deshabilitado */
+--color-gray-200: #cccccc;    /* Texto descriptivo */
+--color-gray-100: #e5e5e5;    /* Texto muy sutil */
+--color-gray-50:  #f5f5f5;    /* Casi blanco */
+--color-white:    #ffffff;    /* Texto principal, acentos */
+Colores Funcionales
+css/* Estados y Acciones */
+--color-primary:   #ffffff;   /* Acción principal */
+--color-secondary: #888888;   /* Acción secundaria */
+--color-success:   #10b981;   /* Éxito, confirmación */
+--color-warning:   #f59e0b;   /* Advertencia, atención */
+--color-error:     #ef4444;   /* Error, peligro */
+--color-info:      #3b82f6;   /* Información */
+
+/* Colores de Marca */
+--color-brand-primary:   #ffffff;
+--color-brand-secondary: #888888;
+Colores Contextuales
+css/* Plataformas y Servicios */
+--color-github:    #333333;
+--color-linkedin:  #0077b5;
+--color-twitter:   #1da1f2;
+--color-dribbble:  #ea4c89;
+--color-behance:   #1769ff;
+--color-figma:     #f24e1e;
+--color-notion:    #000000;
+--color-discord:   #5865f2;
+
+/* Tecnologías */
+--color-javascript: #f7df1e;
+--color-typescript: #3178c6;
+--color-react:      #61dafb;
+--color-vue:        #4fc08d;
+--color-node:       #339933;
+--color-python:     #3776ab;
+
+📏 Espaciado y Layout
+Sistema de Espaciado (8px base)
+css/* Tokens de Espaciado */
+--space-0:   0px;     /* Ningún espacio */
+--space-1:   4px;     /* Micro espacio */
+--space-2:   8px;     /* Espaciado mínimo */
+--space-3:   12px;    /* Espaciado pequeño */
+--space-4:   16px;    /* Espaciado base */
+--space-5:   20px;    /* Espaciado medio */
+--space-6:   24px;    /* Espaciado regular */
+--space-8:   32px;    /* Espaciado grande */
+--space-10:  40px;    /* Espaciado XL */
+--space-12:  48px;    /* Espaciado XXL */
+--space-16:  64px;    /* Separación de secciones */
+--space-20:  80px;    /* Separación grande */
+--space-24:  96px;    /* Separación de páginas */
+--space-32:  128px;   /* Separación máxima */
+Contenedores y Anchos
+css/* Anchos del Sistema */
+--width-xs:     320px;    /* Mobile pequeño */
+--width-sm:     640px;    /* Mobile grande */
+--width-md:     768px;    /* Tablet */
+--width-lg:     1024px;   /* Desktop pequeño */
+--width-xl:     1200px;   /* Desktop estándar */
+--width-2xl:    1400px;   /* Desktop grande */
+--width-full:   100%;     /* Ancho completo */
+
+/* Contenedores */
+--container-padding: var(--space-5);
+--container-max-width: var(--width-xl);
+
+🎭 Sombras y Elevación
+Sistema de Sombras
+css/* Sombras por Niveles de Elevación */
+--shadow-xs:  0 1px 2px rgba(0, 0, 0, 0.05);
+--shadow-sm:  0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+--shadow-md:  0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+--shadow-lg:  0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+--shadow-xl:  0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+--shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.25);
+
+/* Sombras Especiales */
+--shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+--shadow-glow:  0 0 20px rgba(255, 255, 255, 0.1);
+--shadow-focus: 0 0 0 3px rgba(255, 255, 255, 0.1);
+
+🎯 Bordes y Radios
+Sistema de Border Radius
+css--radius-none: 0px;      /* Sin redondeo */
+--radius-xs:   2px;      /* Muy sutil */
+--radius-sm:   4px;      /* Botones, inputs */
+--radius-md:   6px;      /* Cards pequeñas */
+--radius-lg:   8px;      /* Cards medianas */
+--radius-xl:   12px;     /* Cards grandes */
+--radius-2xl:  16px;     /* Modales, containers */
+--radius-3xl:  24px;     /* Elementos destacados */
+--radius-full: 9999px;   /* Círculos, pills */
+Bordes
+css--border-width-0: 0px;
+--border-width-1: 1px;
+--border-width-2: 2px;
+--border-width-4: 4px;
+
+--border-color-default: var(--color-gray-600);
+--border-color-hover:   var(--color-gray-500);
+--border-color-focus:   var(--color-white);
+
+⚡ Animaciones y Transiciones
+Timing Functions
+css/* Easings del Sistema */
+--ease-linear:      linear;
+--ease-in:          cubic-bezier(0.4, 0, 1, 1);
+--ease-out:         cubic-bezier(0, 0, 0.2, 1);
+--ease-in-out:      cubic-bezier(0.4, 0, 0.2, 1);
+--ease-smooth:      cubic-bezier(0.25, 0.46, 0.45, 0.94);
+--ease-bounce:      cubic-bezier(0.68, -0.55, 0.265, 1.55);
+Duraciones
+css--duration-instant: 0ms;     /* Cambios inmediatos */
+--duration-fast:    150ms;   /* Micro interacciones */
+--duration-normal:  300ms;   /* Transiciones estándar */
+--duration-slow:    500ms;   /* Transiciones complejas */
+--duration-slower:  800ms;   /* Animaciones de entrada */
+Animaciones Predefinidas
+css/* Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Scale In */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Slide In */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+🔲 Componentes Base
+Botones
+css/* Botón Base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-sm);
+  
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  
+  border: var(--border-width-1) solid transparent;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-smooth);
+  
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* Variantes de Botón */
+.btn--primary {
+  background: var(--color-white);
+  color: var(--color-gray-900);
+  border-color: var(--color-white);
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--color-white);
+  border-color: var(--color-gray-600);
+}
+
+.btn--secondary:hover {
+  border-color: var(--color-white);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--color-gray-400);
+  border-color: transparent;
+}
+
+.btn--ghost:hover {
+  color: var(--color-white);
+  background: var(--color-gray-800);
+}
+Cards
+css.card {
+  background: var(--color-gray-800);
+  border: var(--border-width-1) solid var(--color-gray-600);
+  border-radius: var(--radius-xl);
+  
+  padding: var(--space-6);
+  
+  box-shadow: var(--shadow-lg);
+  transition: all var(--duration-normal) var(--ease-smooth);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-gray-500);
+  box-shadow: var(--shadow-2xl);
+}
+
+.card__header {
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: var(--border-width-1) solid var(--color-gray-700);
+}
+
+.card__title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+
+.card__description {
+  font-size: var(--text-sm);
+  color: var(--color-gray-400);
+  line-height: 1.5;
+}
+Inputs
+css.input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  
+  background: var(--color-gray-850);
+  border: var(--border-width-1) solid var(--color-gray-600);
+  border-radius: var(--radius-sm);
+  
+  font-size: var(--text-md);
+  color: var(--color-white);
+  
+  transition: all var(--duration-normal) var(--ease-smooth);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-white);
+  box-shadow: var(--shadow-focus);
+}
+
+.input::placeholder {
+  color: var(--color-gray-400);
+}
+
+📱 Responsive Design
+Breakpoints
+css/* Mobile First Approach */
+--breakpoint-sm:  640px;   /* Mobile grande */
+--breakpoint-md:  768px;   /* Tablet */
+--breakpoint-lg:  1024px;  /* Desktop pequeño */
+--breakpoint-xl:  1200px;  /* Desktop estándar */
+--breakpoint-2xl: 1400px;  /* Desktop grande */
+Mixins Responsive
+css/* Media Queries Helpers */
+@media (min-width: 640px)  { /* sm */ }
+@media (min-width: 768px)  { /* md */ }
+@media (min-width: 1024px) { /* lg */ }
+@media (min-width: 1200px) { /* xl */ }
+@media (min-width: 1400px) { /* 2xl */ }
+
+🎪 Estados y Interacciones
+Estados de Componentes
+css/* Estados Base */
+.is-hover     { /* Hover state */ }
+.is-active    { /* Active/Current state */ }
+.is-disabled  { opacity: 0.5; pointer-events: none; }
+.is-loading   { /* Loading state */ }
+.is-error     { border-color: var(--color-error); }
+.is-success   { border-color: var(--color-success); }
+Focus Management
+css/* Accessibility Focus */
+*:focus {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+.focus\:ring {
+  transition: box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.focus\:ring:focus {
+  box-shadow: var(--shadow-focus);
+}
+
+🛠 Utilidades CSS
+Spacing Utilities
+css/* Margin */
+.m-0  { margin: 0; }
+.m-1  { margin: var(--space-1); }
+.m-2  { margin: var(--space-2); }
+/* ... hasta m-32 */
+
+/* Padding */
+.p-0  { padding: 0; }
+.p-1  { padding: var(--space-1); }
+.p-2  { padding: var(--space-2); }
+/* ... hasta p-32 */
+Layout Utilities
+css/* Display */
+.hidden     { display: none; }
+.block      { display: block; }
+.inline     { display: inline; }
+.flex       { display: flex; }
+.grid       { display: grid; }
+
+/* Flexbox */
+.flex-col       { flex-direction: column; }
+.items-center   { align-items: center; }
+.justify-center { justify-content: center; }
+.gap-4          { gap: var(--space-4); }
+
+/* Grid */
+.grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+🎯 Patrones de Uso
+Do's (Hacer)
+✅ Usar espaciado consistente del sistema (múltiplos de 8px)
+✅ Mantener jerarquía tipográfica clara
+✅ Aplicar transiciones suaves en todas las interacciones
+✅ Usar colores del sistema para consistencia
+✅ Implementar estados hover/focus en elementos interactivos
+Don'ts (No Hacer)
+❌ Crear espaciados custom fuera del sistema
+❌ Usar más de 3 pesos de fuente en un componente
+❌ Mezclar diferentes sistemas de color
+❌ Olvidar estados de accessibility
+❌ Sobrecargar con animaciones innecesarias

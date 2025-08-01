@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /*=====================
 Modal Overlay
@@ -107,9 +108,85 @@ Text Section (Lado Izquierdo)
 }
 
 .textSection .hours {
+=======
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    backdrop-filter: blur(5px); /* Blur effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent{
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 80%;
+    height: 75%;
+    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    padding: 1.5rem;
+
+}
+
+.imageSection{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imageSection img{
+    width: 100%;
+}
+
+.closeButton{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 3.2rem;
+    cursor: pointer;
+    border: none;
+    background: none; /* Corrección: usar 'none' en lugar de 'background-color: none' */
+    color: #ffffff;
+    transition: color 0.3s, transform 0.3s ease-in-out;
+    padding: 0;
+    outline: none; /* Elimina el outline por defecto del botón */
+    z-index: 1001; /* Asegura que esté por encima del modal */
+}
+
+.closeButton:hover{
+    color: #ffffff; /* Color rojo para indicar acción de cerrar */
+    transform: rotate(90deg) scale(1.1);
+    background: none; /* Mantiene sin fondo en hover */
+}
+
+
+
+.textSection{
+    width: 50%;
+    padding: 0px 3rem;
+    padding-left: 0;
+    text-align: start;
+}
+
+.issuer{
+>>>>>>> designCertificates
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.7);
     font-weight: 500;
+<<<<<<< HEAD
     padding: 10px 15px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
@@ -324,5 +401,89 @@ Responsive Design
         width: 40px;
         height: 40px;
         font-size: 1.2rem;
+=======
+    color: #b0b0b0;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-bottom: 2rem;
+    margin: 0;
+}
+
+.textSection h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    margin: 0;
+    padding-bottom: 3%;
+}
+
+.description{
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/*Responsive Mobile*/
+
+@media (max-width: 480px) {
+    .modalContent{
+        flex-direction: column;
+        justify-content: start;
+        width: 90%;
+        height: auto;
+        padding: 0;
+        padding-bottom: 1rem;
+
+    }
+
+    .imageSection{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+
+    .textSection{
+        width: 100%;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .textSection h3 {
+        font-size: 1.8rem;
+        color: var(--color-fifthary);
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    .description{
+        font-size: 1.1rem;
+        color: var(--color-quaternary);
+        margin: 0;
+        gap: 0;
+        padding: 10px;
+    }
+    
+    .hours{
+        font-size: 1.1rem;
+        color: var(--color-quaternary);
+        margin: 0;
+        padding: 10px;
+    }
+    .closeButton{
+        color: var(--color-fifthary);
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+    .closeButton:hover{
+        color: var(--color-fifthary);
+        transform: rotate(90deg) scale(1.1);
+        background: none;
+>>>>>>> designCertificates
     }
 }

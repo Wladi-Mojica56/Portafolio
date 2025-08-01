@@ -5,18 +5,27 @@ Main Certifications Section
     padding: 0.75rem 2rem;
     max-width: 100%;
     margin: 0 auto;
-    background-color: var(--color-primary);
 }
 
 /* Section Title */
 .certificationsSection h2 {
     text-align: center;
     font-family: var(--font-secondary);
-    margin: 0;
-    padding: 2.5rem 0;
-    font-size: 2.5rem;
-    color: var(--color-secondary);
+    margin: 5rem 0 0 0;
+    font-size: 2.6rem;
+    color: var(--color-tertiary);
 }
+
+.certDescription{
+    font-family: var(--font-secondary);
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color-fifthary);
+    margin: 0;
+    margin-bottom: 3rem;
+}
+
 
 /*=====================
 Swiper Carousel Configuration
@@ -43,7 +52,7 @@ Certification Card
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.6s ease, box-shadow 0.3s ease;
-    background-color: var(--color-quaternary);
+    background-color: var(--color-secondary);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -66,6 +75,14 @@ Certification Card
 /*=====================
 Certificate Information
 =======================*/
+.cardtitle{
+    font-family: var(--font-tertiary);
+    font-size: 1.2rem;
+    color: var(--color-tertiary);
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
 .certInfo {
     display: flex;
     flex-direction: column;
@@ -75,68 +92,44 @@ Certificate Information
 
 /* Certificate Title */
 .certInfo h3 {
-    margin: 0 0 0.5rem;
+    margin: 0;
     font-size: 1.4rem;
-    color: var(--color-secondary);
 }
 
 /* Issuing Entity */
 .issuer {
-    padding-bottom: .75rem;
-    color: var(--color-tertiary);
+    font-weight: 500;
+    color: var(--color-fifthary);
+    padding-bottom: 3rem;
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    font-family: var(--font-primary);
 }
 
-/* Course Duration */
-.hours {
-    color: var(--color-tertiary);
-    font-size: 0.8rem;
-    font-style: italic;
-}
+
 
 /* Button View More*/
 
-.viewMoreButton {
-    /* Diseño base */
-    max-width: 200px; 
-    background-color: transparent;
-    color: var(--color-secondary); /* Texto blanco suave */
-    border: 2px solid var(--color-fifthary); /* Borde turquesa (#4DB6AC) */
+.viewMoreButton{
     padding: 12px 24px;
     font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    border: 1px solid var(--color-tertiary);
     border-radius: 15px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    
-    /* Efectos sutiles */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
-    /* Posicionamiento/interacción */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px; /* Para íconos */
+    background-color: transparent;
+    color: var(--color-quaternary);
+    font-family: var(--font-primary);
+    margin: 0;
+    margin-bottom: 1rem;
 }
 
-/* Efecto hover elegante */
+
 .viewMoreButton:hover {
-    background-color: var(--color-fifthary); /* Turquesa (#4DB6AC) */
-    color: var(--color-primary); /* Texto negro (#121212) */
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-secondary);
+    color: var(--color-fifthary);
+    transition: background-color 0.3s ease;
+    border: 1px solid var(--color-fifthary);
+
 }
-
-/* Efecto active (clic) */
-.viewMoreButton:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-
 
 /*=====================
 Swiper Controls Customization
@@ -190,7 +183,7 @@ Responsive Design
     /* Reduce title size */
     .certificationsSection h2 {
         font-size: 2rem;
-        margin-bottom: 2rem;
+
     }
     
     /* Adjustments for active slide on tablets */
@@ -204,6 +197,7 @@ Responsive Design
     /* Further reduction of title size */
     .certificationsSection h2 {
         font-size: 1.8rem;
+        padding-bottom: 1rem;
     }
     
     /* Adjustments for main container on mobile */
@@ -238,6 +232,7 @@ Responsive Design
         height: 180px;
     }
     
+
     /* Restore internal padding */
     .certInfo {
         padding: 1rem; /* Restore some padding for better readability */
@@ -272,4 +267,25 @@ Responsive Design
         opacity: 1;
         transition: opacity 0.5s ease, transform 0.5s ease;
     }
+}
+
+.viewAllButton{
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: 1px solid var(--color-tertiary);
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-quaternary);
+    font-family: var(--font-primary);
+    margin: 2rem auto;
+    display: block;
+    text-align: center;
+}
+
+.viewAllButton:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-fifthary);
+    transition: background-color 0.3s ease;
+    border: 1px solid var(--color-fifthary);
 }

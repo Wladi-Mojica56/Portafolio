@@ -1,15 +1,15 @@
 :root {
-    --color-primary: #121212;
-    --color-secondary: #E0E0E0;
-    --color-tertiary: #82B1FF; /* Azul material */
-    --color-quaternary: #1E1E1E;
-    --color-fifthary: #00ACC1; /* Cian material */
+    --color-primary:#13151A;
+    --color-secondary: #1E2028;
+    --color-tertiary: #FFFFFF; /* Azul material */
+    --color-quaternary: #B4B4B4;
+    --color-fifthary: #7C3AED; /* Cian material */
 }
 
 
 /* Estilos base del header */
 .header {
-    background-color: var(--color-primary);
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,9 +28,9 @@
 }
 
 .logo {
-    color: var(--color-secondary);
+    color: var(--color-quaternary);
     font-size: 2rem;
-    font-family: var(--font-primary);
+    font-family: var(--font-tertiary);
     font-weight: bold;
     text-decoration: none;
     position: absolute;
@@ -45,15 +45,15 @@
 .contact {
     padding: 10px 1.75rem;
     text-decoration: none;
-    color: var(--color-secondary);
-    background-color: var(--color-quaternary);
+    background-color: var(--color-fifthary);
     border: 1px solid var(--color-secondary);
-    border-radius: 10px;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.2rem;
+    border-radius: 13px;
+    font-family: var(--font-secondary);
+    font-size: 1.4rem;
     position: relative;
     overflow: hidden;
     z-index: 1;
+    transition: background-color 0.3s ease, box-shadow 0.5s ease;
 }
 
 .contactText {
@@ -61,81 +61,11 @@
     z-index: 2;
 }
 
-.contact .text-blur-out {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.1);
-    z-index: 1;
-    pointer-events: none;
+.contact:hover{
+    background-color: var(--color-secondary);
+    color: var(--color-fifthary);
+    box-shadow: 0 0 5px var(--color-quaternary), 0 0 10px var(--color-quaternary), 0 0 20px var(--color-quaternary);
 }
-
-/*=====================
-Animations 
-=======================*/
-
-/* Animación de desenfoque de texto */
-.text-blur-out {
-    -webkit-animation: text-blur-out 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) infinite alternate-reverse;
-    animation: text-blur-out 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) infinite alternate-reverse;
-}
-
-@-webkit-keyframes text-blur-out {
-    0% {
-        -webkit-filter: blur(0.01);
-        filter: blur(0.01);
-    }
-    100% {
-        -webkit-filter: blur(12px) opacity(0%);
-        filter: blur(12px) opacity(0%);
-    }
-}
-
-@keyframes text-blur-out {
-    0% {
-        -webkit-filter: blur(0.01);
-        filter: blur(0.01);
-    }
-    100% {
-        -webkit-filter: blur(12px) opacity(0%);
-        filter: blur(12px) opacity(0%);
-    }
-}
-
-/* Animación de expansión de texto */
-.tracking-in-expand {
-    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    animation: tracking-in-expand 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-
-@-webkit-keyframes tracking-in-expand {
-    0% {
-        letter-spacing: -0.5em;
-        opacity: 0;
-    }
-    40% {
-        opacity: 0.6;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes tracking-in-expand {
-    0% {
-        letter-spacing: -0.5em;
-        opacity: 0;
-    }
-    40% {
-        opacity: 0.6;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 /*=====================
 Responsive Design
 =======================*/
@@ -178,12 +108,15 @@ Responsive Design
 /* Mobile (small screens) */
 @media (max-width: 480px) {
     .header {
-        padding: 1rem 1rem;
+        padding: 1rem ;
         justify-content: space-between;
         gap: 10px;
     }
     
     .logoContainer {
+        display: flex;
+        justify-content: start;
+        align-items: center;
         width: 82px;
         margin-right: 0;
         height: 40px;
@@ -195,6 +128,7 @@ Responsive Design
     
     .navigationContainer {
         margin-left: 0px;
+        color: var(--color-tertiary);
     }
     
     
