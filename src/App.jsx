@@ -1,9 +1,11 @@
 import React from 'react';
 import Header from './components/header/Header';
 import Hero from './components/hero/hero';
-import Certifications from './components/Certifications/certifications';
+
 import './App.css';
 import Background from './Background';
+import Certifications from './components/Certifications/Certifications';
+import Footer from './components/footer/Footer';
 
 
 
@@ -15,7 +17,7 @@ function App() {
       <Header />
       <Hero />
       <Certifications />
-
+      <Footer />
     </div>
     
   );

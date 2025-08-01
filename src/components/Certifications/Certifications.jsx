@@ -26,19 +26,19 @@ function Certifications() {
     return (
         <section className={styles.certificationsSection} id="certifications">
             <h2>Certificaciones Destacadas</h2>
-            
+            <p className={styles.certDescription}>Reconocimientos a mi aprendizaje y actualización constante.</p>
+
             <Swiper
                 modules={[Autoplay, Pagination, EffectCoverflow]}
                 spaceBetween={30}
-                slidesPerView={3}
                 centeredSlides
-                loop
                 effect="coverflow"
+                loop={true}
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,
-                    depth: 100,
-                    modifier: 2.5,
+                    depth: 150,
+                    modifier: 2,
                     slideShadows: false,
                 }}
                 autoplay={{
@@ -60,23 +60,34 @@ function Certifications() {
                             <div className={styles.certInfo}>
                                 <h3 className={styles.cardtitle}>{certification.title}</h3>
                                 <p className={styles.issuer}>{certification.issuer}</p>
-                                {certification.hours && <p className={styles.hours}>{certification.hours}</p>}
+                                
                                 
                                 <motion.button
                                     className={styles.viewMoreButton}
                                     onClick={() => handleViewMore(certification)}
-                                    whileHover={{ scale: 1.1}}
+                                    whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.8 }}
-                                    >
+                                >
                                     Ver Detalles
                                 </motion.button>
-
                             </div>
                         </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
+            
+            <motion.button
+                className={styles.viewAllButton}
+                initial={{ opacity: 0, rotate: -5 }}
+                animate={{ opacity: 1, rotate: 0 }}
+                whileHover={{ rotate: 2, scale: 1.06 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 200 }}
+                >
+                Ver Todas las Certificaciones
+                </motion.button>
 
+                
             {selectedCertification && (
                 <CertificationModal certification={selectedCertification} onClose={closeModal} />
             )}

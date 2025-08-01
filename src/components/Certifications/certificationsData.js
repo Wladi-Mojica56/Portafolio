@@ -50,5 +50,25 @@ export const certificationsData = [
         hours: undefined,
         category: "Desarrollo Web",
         description: "Enfoque en animaciones CSS avanzadas para elevar la interactividad de interfaces web. Obtuve conocimientos en keyframes, transiciones, transformaciones y técnicas de optimización para crear experiencias visuales atractivas que mejoran significativamente el engagement de los usuarios."
+    },
+
+    {
+        id: 6,
+        title: "Css Animations",
+        image: CssAnimations,
+        issuer: "Scrimba & Coursera",
+        hours: undefined,
+        category: "Desarrollo Web",
+        description: "Enfoque en animaciones CSS avanzadas para elevar la interactividad de interfaces web. Obtuve conocimientos en keyframes, transiciones, transformaciones y técnicas de optimización para crear experiencias visuales atractivas que mejoran significativamente el engagement de los usuarios."
+    },
+
+    {
+        id: 7,
+        title: "Css Animations",
+        image: CssAnimations,
+        issuer: "Scrimba & Coursera",
+        hours: undefined,
+        category: "Desarrollo Web",
+        description: "Enfoque en animaciones CSS avanzadas para elevar la interactividad de interfaces web. Obtuve conocimientos en keyframes, transiciones, transformaciones y técnicas de optimización para crear experiencias visuales atractivas que mejoran significativamente el engagement de los usuarios."
     }
 ]

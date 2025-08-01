@@ -10,7 +10,7 @@ const Background = () => {
             // Configuración de particles.js
             const particlesConfig = {
                 particles: {
-                    number: { value: 30, density: { enable: true, value_area: 1800 } },
+                    number: { value: 70, density: { enable: true, value_area: 1800 } },
                     color: { value: "#ffffff" },
                     shape: { type: "circle" },
                     opacity: { value: 0.8, random: false },

@@ -79,7 +79,7 @@
 }
 
 .socialIcon {
-    color: var(--color-primary);
+    color: var(--color-quaternary);
     font-size: 1.8rem;
     transition: transform 0.3s ease-in-out, color 0.3s ease;
     display: flex;
@@ -88,7 +88,7 @@
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    background-color: var(--color-secondary);
+    background-color: var(--color-tertiary);
 }
 
 .socialIcon:hover {

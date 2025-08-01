@@ -1,10 +1,25 @@
 import React from 'react';
 import styles from './CertificationModal.module.css';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const modalVariants = {
+    hidden: { opacity: 0, scale: 0.95, y: 40 },
+    visible: { opacity: 1, scale: 1, y: 0 },
+    exit: { opacity: 0, scale: 0.95, y: 40 }
+};
 
 function CertificationModal({certification, onClose}){
     if (!certification) return null;
     return (
-        <div className={styles.modal}>
+        <AnimatePresence>
+            <motion.div
+                className={styles.modal}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                variants={modalVariants}
+                transition={{ duration: 0.35, type: "spring", stiffness: 180 }}
+            >
                 <div className={styles.modalContent}>
                     
                 
@@ -22,7 +37,8 @@ function CertificationModal({certification, onClose}){
                         {certification.hours && <p className={styles.hours}>{certification.hours}</p>}
                     </div>
             </div>
-        </div>
+            </motion.div>
+        </AnimatePresence>
     );
 }
 
