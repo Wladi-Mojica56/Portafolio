@@ -85,7 +85,7 @@ function Certifications() {
                 transition={{ type: "spring", stiffness: 200 }}
                 >
                 Ver Todas las Certificaciones
-                </motion.button>
+            </motion.button>
 
                 
             {selectedCertification && (

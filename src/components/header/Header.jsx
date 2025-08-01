@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 import Navigation from '../header/navigation';
+import {motion} from 'framer-motion';
 
 function Header() {
     const [logoText, setLogoText] = useState('WladCode');
@@ -47,10 +48,18 @@ function Header() {
             </div>
 
             <div className={styles.contactContainer}>
-                <a href="#contact" className={styles.contact}>
+
+                <motion.button
+                href="#contact" 
+                className={styles.contact}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3}}
+                whileTap={{ scale: 0.9 }}
+                >
                     <span className={styles.contactText}>Contacto</span>
-                    <span className={styles['text-blur-out']}></span>
-                </a>
+                </motion.button>
+
             </div>
             
         </header>

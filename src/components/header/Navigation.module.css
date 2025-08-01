@@ -79,14 +79,14 @@
 }
 
 .socialIcon {
-    color: var(--color-quaternary);
+    color: var(--color-primary);
     font-size: 1.8rem;
     transition: transform 0.3s ease-in-out, color 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     border-radius: 50%;
     background-color: var(--color-tertiary);
 }
