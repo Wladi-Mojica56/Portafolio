@@ -13,7 +13,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename='/portafolio/'>
+    <Router >
       <Header />
       <Routes>
         <Route path="/" element={
