@@ -23,16 +23,3 @@
     text-align: center;
     padding: 0 2rem 2rem ;
 }
-
-
-.containerRight{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-}
-
-.imgPerfil{
-    object-fit: cover;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    width: 500px;
-}

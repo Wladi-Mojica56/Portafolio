@@ -8,6 +8,7 @@ import Projects from './components/projects/Projects';
 import SobreMi from './components/about/SobreMi';
 import CertificationsPage from './components/Certifications/CertificationsPage';
 import Layout from './components/layout/Layout';
+import Proyectos from './components/projects/Proyectos';
 
 import './App.css';
 
@@ -40,6 +41,13 @@ function App() {
             <CertificationsPage />
           </Layout>
         } />
+        
+        <Route path="/Proyectos" element={
+          <Layout>
+            <Proyectos />
+          </Layout>
+        } />
+
       </Routes>
     </Router>
   );
