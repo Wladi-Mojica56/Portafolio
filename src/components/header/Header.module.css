@@ -37,6 +37,28 @@
     transition: opacity 0.5s ease-in-out;
 }
 
+.logoLink {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.logoLink:hover {
+    transform: scale(1.05);
+}
+
+.logoLink:focus {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
 /* Botón de contacto */
 
 .contactContainer{
@@ -64,7 +86,7 @@
 .contact:hover{
     background-color: var(--color-secondary);
     color: var(--color-fifthary);
-    box-shadow: 0 0 5px var(--color-quaternary), 0 0 10px var(--color-quaternary), 0 0 20px var(--color-quaternary);
+    box-shadow: 0 0 5px var(--color-fifthary), 0 0 10px var(--color-fifthary), 0 0 20px var(--color-fifthary);
 }
 /*=====================
 Responsive Design

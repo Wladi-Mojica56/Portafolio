@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 import Navigation from '../header/navigation';
 import {motion} from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 function Header() {
     const [logoText, setLogoText] = useState('WladCode');
@@ -38,9 +39,11 @@ function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.logoContainer}>
-                <div className={`${styles.logo} ${styles['tracking-in-expand']}`}>
-                    {logoText}
-                </div>
+                <Link to="/" className={styles.logoLink}>
+                    <div className={`${styles.logo} ${styles['tracking-in-expand']}`}>
+                        {logoText}
+                    </div>
+                </Link>
             </div>
 
             <div className={styles.navigationContainer}>

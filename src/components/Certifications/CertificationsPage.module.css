@@ -1,0 +1,211 @@
+/* Header de la página */
+.headerPage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.titlePage {
+    text-align: center;
+    font-family: var(--font-secondary);
+    font-size: 3rem;
+    color: var(--color-tertiary);
+    margin: 0 0 1rem 0;
+}
+
+.descriptionPage {
+    font-family: var(--font-secondary);
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color-fifthary);
+    margin: 0;
+    margin-bottom: 3rem;
+}
+
+/* Filtros */
+.filterButtons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filterButtons button {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border: 1px solid var(--color-tertiary);
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-quaternary);
+    font-family: var(--font-primary);
+    margin: 0;
+}
+
+.filterButtons button:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-fifthary);
+    transition: background-color 0.3s ease;
+    border: 1px solid var(--color-fifthary);
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 2rem;
+}
+
+/* Tarjeta de certificación */
+.certificationCard {
+    background-color: var(--color-secondary);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 400px;
+    text-align: center;
+}
+
+.certificationCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid var(--color-quaternary);
+}
+
+.title {
+    font-family: var(--font-tertiary);
+    font-size: 1.2rem;
+    color: var(--color-tertiary);
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.issuer {
+    font-weight: 500;
+    color: var(--color-fifthary);
+    padding-bottom: 3rem;
+    font-size: 1.1rem;
+    font-family: var(--font-primary);
+}
+
+/* Botones */
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+
+.viewMoreButton {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: 1px solid var(--color-tertiary);
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-quaternary);
+    font-family: var(--font-primary);
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.viewMoreButton:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-fifthary);
+    transition: background-color 0.3s ease;
+    border: 1px solid var(--color-fifthary);
+}
+
+.link {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: 1px solid var(--color-fifthary);
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: var(--color-fifthary);
+    color: var(--color-tertiary);
+    font-family: var(--font-primary);
+    margin: 0;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.link:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-fifthary);
+    transition: background-color 0.3s ease;
+    border: 1px solid var(--color-fifthary);
+}
+
+/* Responsive Design */
+
+/* Tablets (medium screens) */
+@media (max-width: 768px) {
+    .headerPage {
+        padding: 0;
+    }
+    .titlePage {
+        font-size: 2.5rem;
+    }
+
+    .descriptionPage {
+        font-size: 1.3rem;
+    }
+
+    .filterButtons button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .certificationCard {
+        width: 90%;
+    }
+}
+
+/* Mobile (small screens) */
+@media (max-width: 480px) {
+
+    .headerPage {
+        padding: 0;
+    }
+    .titlePage {
+        font-size: 2rem;
+    }
+
+    .descriptionPage {
+        font-size: 1.2rem;
+    }
+
+    .filterButtons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .filterButtons button {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .certificationCard {
+        width: 100%;
+    }
+
+    .viewMoreButton, .link {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}

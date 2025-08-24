@@ -4,6 +4,7 @@ import { Autoplay, Pagination, EffectCoverflow } from 'swiper/modules';
 import { certificationsData } from './certificationsData';
 import styles from './Certifications.module.css';
 import CertificationModal from './CertificationModal';
+import { useNavigate } from 'react-router-dom';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -14,6 +15,7 @@ import { motion } from 'framer-motion';
 
 function Certifications() {
     const [selectedCertification, setSelectedCertification] = useState(null);
+    const navigate = useNavigate();
 
     const handleViewMore = (certification) => {
         setSelectedCertification(certification);
@@ -22,6 +24,11 @@ function Certifications() {
     const closeModal = () => {
         setSelectedCertification(null);
     };
+
+    const handleViewAllCertifications = () => {
+        navigate('/certificaciones');
+    }
+
 
     return (
         <section className={styles.certificationsSection} id="certifications">
@@ -78,6 +85,7 @@ function Certifications() {
             
             <motion.button
                 className={styles.viewAllButton}
+                onClick={handleViewAllCertifications}
                 initial={{ opacity: 0, rotate: -5 }}
                 animate={{ opacity: 1, rotate: 0 }}
                 whileHover={{ rotate: 2, scale: 1.06 }}

@@ -67,9 +67,9 @@ Certification Card
 /* Certificate Image */
 .certCard img {
     width: 100%;
-    height: 300px;
+    height: auto;
     object-fit: cover;
-    border-bottom: 1px solid var(--color-fifthary);
+    border-bottom: 1px solid var(--color-quaternary);
 }
 
 /*=====================
